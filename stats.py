@@ -22,6 +22,21 @@ def get_char_count(path_to_file):
             char_dict[c] = 1
     return char_dict
 
+#This function sorts the list from highest count to lowest
+def sort_dict(dict):
+    sorted_list = []
+    for c, count in dict.items():
+        if c.isalpha():
+            sorted_list.append({"name": c, "num": count})
+        else:
+            pass
+
+    sorted_list.sort(reverse=True, key=sort_on)
+    return sorted_list
+
+def sort_on(sorted_list):
+   return sorted_list["num"]
+
     
 
 
